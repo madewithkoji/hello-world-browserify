@@ -3,11 +3,10 @@
     "subdomain": ".withkoji.com",
     "frontend": {
       "output": "dist",
+      "type": "static",
       "commands": [
         "npm install",
         "npm run build"
-      ],
-      "injections": [
       ]
     }
   }
