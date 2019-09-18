@@ -13,7 +13,7 @@ A blank template ready for your own favorite tools.
 ## Dependencies
 - [browserfiy + babel](http://browserify.org/) use require('modules') in the browser.
 - [budo](https://github.com/mattdesl/budo) easy browserify development server.
-- [koji-tools](https://www.npmjs.com/package/koji-tools) a library for making vcc integration easy.
+- [koji-vcc](https://www.npmjs.com/package/@withkoji/vcc) a library for making vcc integration easy.
 
 ## Support
 ### Community

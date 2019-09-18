@@ -11,25 +11,13 @@
  */
 
 // import and load koji configs
-var Koji = require('koji-tools');
-Koji.pageLoad();
-
-// set app name
-const config = Koji.config;
-
-// listen for config change events
-Koji.on('change', (scope, key, value) => {
-
-    // update configs and re-render
-    config[scope][key] = value
-    render();
-})
+import Koji from '@withkoji/vcc';
 
 // render app
 const render = () => {
     document.body.innerHTML = `
         <h1>
-            ${config.settings.name}
+            ${Koji.config.settings.name}
         </h1>
     `
 };

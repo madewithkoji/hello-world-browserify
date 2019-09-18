@@ -4,13 +4,12 @@
   "description": "A blank Koji template with browserify bundler",
   "main": "index.js",
   "scripts": {
-    "prestart": "koji-tools watch &",
-    "start": "npx budo index.js --live -- -t babelify -g browserify-css",
+    "prestart": "koji-vcc watch &",
+    "start": "npx budo index.js --live -- -t [ babelify --presets [ @babel/preset-env ] ] -g browserify-css",
     "build:html": "cat index.html | sed 's/index.js/bundle.js/' > dist/index.html",
-    "build:js": "npx browserify index.js -t babelify -g browserify-css -o dist/bundle.js",
+    "build:js": "npx browserify index.js -t [ babelify --presets [ @babel/preset-env ] ] -g browserify-css -o dist/bundle.js",
     "build": "rm -rf build/*; npm run build:html; npm run build:js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postbuild": "koji-tools pwa"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -25,10 +24,10 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.5.5",
+    "@withkoji/vcc": "^1.0.8",
     "babelify": "^10.0.0",
     "browserify": "^16.3.0",
     "browserify-css": "^0.15.0",
-    "budo": "^11.6.2",
-    "koji-tools": "^0.5.1"
+    "budo": "^11.6.2"
   }
 }
