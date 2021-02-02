@@ -17,7 +17,7 @@ A blank template ready for your own favorite tools.
 
 ## Support
 ### Community
-If you need any help, you can ask the community by [joining the discord](https://discordapp.com/invite/eQuMJF6).
+If you need any help, you can ask the community by [joining the discord](https://discord.com/invite/9egkTWf4ec).
 
 ### Resources
 - [Browserify Docs](https://github.com/browserify/browserify)
